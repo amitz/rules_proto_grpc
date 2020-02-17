@@ -31,6 +31,10 @@ proto_compile_attrs = {
         doc = "If true, all generated files are merged into a single directory with the name of current label and these new files returned as the outputs. If false, the original generated files are returned across multiple roots",
         default = True,
     ),
+    "transitive": attr.bool(
+        doc = "If true, generates outputs for dependencies directly named in 'deps' AND all transitive dependencies",
+        default = True,
+    ),
 }
 
 proto_compile_aspect_attrs = {
@@ -44,6 +48,7 @@ proto_compile_aspect_attrs = {
 def proto_compile_impl(ctx):
     # Aggregate output files and dirs created by the aspect as it has walked the deps
     output_files = [dep[ProtoLibraryAspectNodeInfo].output_files for dep in ctx.attr.deps]
+
     output_dirs = [d for dirs in [dep[ProtoLibraryAspectNodeInfo].output_dirs for dep in ctx.attr.deps] for d in dirs]
 
     # Check merge_directories and prefix_path
@@ -146,17 +151,35 @@ def proto_compile_impl(ctx):
                     ))
 
     # Create default and proto compile providers
-    all_outputs = [f for files in final_output_files.values() for f in files] + final_output_dirs
+    transitive_outputs = [f for files in final_output_files.values() for f in files] + final_output_dirs
+
+    default_provider = None
+
+    if ctx.attr.transitive:
+        default_provider = DefaultInfo(
+            files = depset(transitive_outputs),
+            data_runfiles = ctx.runfiles(files = transitive_outputs),
+        )
+    else:
+        non_transitive_outputs = []
+
+        for dep in transitive_outputs:
+            if ctx.attr.name.split('_')[0] in dep.basename:
+                # print(dep)
+                non_transitive_outputs.append(dep)
+
+        default_provider = DefaultInfo(
+            files = depset(non_transitive_outputs),
+            data_runfiles = ctx.runfiles(files = transitive_outputs),
+        )
+
     return [
         ProtoCompileInfo(
             label = ctx.label,
             output_files = final_output_files,
             output_dirs = final_output_dirs,
         ),
-        DefaultInfo(
-            files = depset(all_outputs),
-            data_runfiles = ctx.runfiles(files = all_outputs),
-        ),
+        default_provider,
     ]
 
 def proto_compile_aspect_impl(target, ctx):
