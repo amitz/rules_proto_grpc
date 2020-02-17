@@ -16,6 +16,7 @@ proto_plugin(
     out = "{name}.jar",
     options = [
         "grpc",
+	"java_conversions",
     ],
     tool = select({
         "@bazel_tools//src/conditions:host_windows": "@com_github_scalapb_scalapb//:bin/protoc-gen-scala.bat",
