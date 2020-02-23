@@ -164,8 +164,8 @@ def proto_compile_impl(ctx):
         non_transitive_outputs = []
 
         for dep in transitive_outputs:
-            if ctx.attr.name.split('_')[0] in dep.basename:
-                # print(dep)
+            folder = ctx.attr.generator_location.rsplit('/', 1)[0]
+            if dep.short_path.startswith(folder):
                 non_transitive_outputs.append(dep)
 
         default_provider = DefaultInfo(
