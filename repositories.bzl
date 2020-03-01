@@ -17,8 +17,8 @@ VERSIONS = {
         "type": "github",
         "org": "protocolbuffers",
         "repo": "protobuf",
-        "ref": "v3.13.0",
-        "sha256": "9b4ee22c250fe31b16f1a24d61467e40780a3fbb9b91c3b65be2a376ed913a1a",
+        "ref": "v3.10.0",
+        "sha256": "",
         "binds": [
             {
                 "name": "protobuf_clib",
@@ -125,8 +125,13 @@ VERSIONS = {
         "type": "github",
         "org": "bazelbuild",
         "repo": "rules_go",
+<<<<<<< HEAD
         "ref": "v0.24.3",
         "sha256": "e37e7937141a1deea40ee2f06a7850fc520e2272de7aacd85ad8a2ace11d2e83",
+=======
+        "ref": "v0.22.1",
+        "sha256": "fbf7e1f77f44697c0ddee55e36cc01a092e8097323deb5489f4052f9b6aa4d21",
+>>>>>>> Using older version to support our Java platforms.
     },
     "bazel_gazelle": {
         "type": "github",
@@ -159,8 +164,33 @@ VERSIONS = {
         "type": "github",
         "org": "grpc",
         "repo": "grpc-java",
+<<<<<<< HEAD
         "ref": "v1.32.1",  # Bug in 1.32.0 release means 1.32.1 should be used
         "sha256": "e5d691f80e7388035c34616a17830ec2687fb2ef5c5d9c9b79c605a7addb78ab",
+=======
+        "ref": "v1.25.0",
+        "sha256": "c1db768aef096a43c57ae14e2feec9cb3f7921c41da24bc0ed2ccd60c296d5bb",
+    },
+    "javax_annotation_javax_annotation_api": {
+        "type": "jvm_maven_import_external",
+        "artifact": "javax.annotation:javax.annotation-api:1.2",
+        "server_urls": ["https://repo.maven.apache.org/maven2"],
+        "artifact_sha256": "5909b396ca3a2be10d0eea32c74ef78d816e1b4ead21de1d78de1f890d033e04",
+        "licenses": ["reciprocal"], # CDDL License
+    },
+    "com_google_errorprone_error_prone_annotations": {
+        "type": "jvm_maven_import_external",
+        "artifact": "com.google.errorprone:error_prone_annotations:2.3.2",
+        "server_urls": ["https://repo.maven.apache.org/maven2"],
+        "artifact_sha256": "357cd6cfb067c969226c442451502aee13800a24e950fdfde77bcdb4565a668d",
+        "licenses": ["notice"], # Apache 2.0
+        "binds": [
+            {
+                "name": "error_prone_annotations",
+                "actual": "@com_google_errorprone_error_prone_annotations//jar",
+            },
+        ]
+>>>>>>> Using older version to support our Java platforms.
     },
 
     # NodeJS
