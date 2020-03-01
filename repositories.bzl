@@ -11,8 +11,8 @@ VERSIONS = {
         "type": "github",
         "org": "protocolbuffers",
         "repo": "protobuf",
-        "ref": "v3.11.0",
-        "sha256": "6d356a6279cc76d2d5c4dfa6541641264b59eae0bc96b852381361e3400d1f1c",
+        "ref": "v3.10.0",
+        "sha256": "",
         "binds": [
             {
                 "name": "protobuf_clib",
@@ -141,8 +141,8 @@ VERSIONS = {
         "type": "github",
         "org": "bazelbuild",
         "repo": "rules_go",
-        "ref": "v0.20.2",
-        "sha256": "c92e9be17b8f5d3a5cd4b0549a92c4835a37388b50f007c9cdec9f4ad7baf1f4",
+        "ref": "v0.22.1",
+        "sha256": "fbf7e1f77f44697c0ddee55e36cc01a092e8097323deb5489f4052f9b6aa4d21",
     },
     "bazel_gazelle": {
         "type": "github",
@@ -182,8 +182,8 @@ VERSIONS = {
         "type": "github",
         "org": "grpc",
         "repo": "grpc-java",
-        "ref": "62e8655f1bc4dfb474afbf332ca7571c1454e6ef",  # Non-version release commit on 1.24.x branch until Maven HTTPS fix is merged to a release
-        "sha256": "920977aa6d5beeefdf6668848589319c85d5cf3570329bab4d1a04425546e9a1",
+        "ref": "v1.25.0",
+        "sha256": "c1db768aef096a43c57ae14e2feec9cb3f7921c41da24bc0ed2ccd60c296d5bb",
     },
     "javax_annotation_javax_annotation_api": {
         "type": "jvm_maven_import_external",
