@@ -165,7 +165,8 @@ def proto_compile_impl(ctx):
 
         for dep in transitive_outputs:
             folder = ctx.attr.generator_location.rsplit('/', 1)[0]
-            if dep.short_path.startswith(folder):
+            # Yacky hacky
+            if dep.short_path.find(folder) != -1:
                 non_transitive_outputs.append(dep)
 
         default_provider = DefaultInfo(
