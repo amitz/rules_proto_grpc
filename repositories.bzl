@@ -126,12 +126,17 @@ VERSIONS = {
         "org": "bazelbuild",
         "repo": "rules_go",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "ref": "v0.24.3",
         "sha256": "e37e7937141a1deea40ee2f06a7850fc520e2272de7aacd85ad8a2ace11d2e83",
 =======
         "ref": "v0.22.1",
         "sha256": "fbf7e1f77f44697c0ddee55e36cc01a092e8097323deb5489f4052f9b6aa4d21",
 >>>>>>> Using older version to support our Java platforms.
+=======
+        "ref": "v0.21.4",
+        "sha256": "f020c69932754be6316d8df110a748ba5f9e8776a7a988e2fedb3eb7eb38fe58",
+>>>>>>> Updaing Rules_go version.
     },
     "bazel_gazelle": {
         "type": "github",
