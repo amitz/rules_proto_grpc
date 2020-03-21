@@ -12,7 +12,7 @@ VERSIONS = {
         "org": "protocolbuffers",
         "repo": "protobuf",
         "ref": "v3.10.0",
-        "sha256": "",
+        "sha256": "758249b537abba2f21ebc2d02555bf080917f0f2f88f4cbe2903e0e28c4187ed",
         "binds": [
             {
                 "name": "protobuf_clib",
