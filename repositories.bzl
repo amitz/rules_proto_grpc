@@ -125,18 +125,8 @@ VERSIONS = {
         "type": "github",
         "org": "bazelbuild",
         "repo": "rules_go",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "ref": "v0.24.3",
-        "sha256": "e37e7937141a1deea40ee2f06a7850fc520e2272de7aacd85ad8a2ace11d2e83",
-=======
-        "ref": "v0.22.1",
-        "sha256": "fbf7e1f77f44697c0ddee55e36cc01a092e8097323deb5489f4052f9b6aa4d21",
->>>>>>> Using older version to support our Java platforms.
-=======
-        "ref": "v0.21.4",
-        "sha256": "f020c69932754be6316d8df110a748ba5f9e8776a7a988e2fedb3eb7eb38fe58",
->>>>>>> Updaing Rules_go version.
+        "ref": "v0.23.3",
+        "sha256": "608bb3e3788a21aa0653faaa6a3e00ddf806e26aa97a6f0d960ace2b2c958950",
     },
     "bazel_gazelle": {
         "type": "github",
@@ -169,12 +159,8 @@ VERSIONS = {
         "type": "github",
         "org": "grpc",
         "repo": "grpc-java",
-<<<<<<< HEAD
         "ref": "v1.32.1",  # Bug in 1.32.0 release means 1.32.1 should be used
         "sha256": "e5d691f80e7388035c34616a17830ec2687fb2ef5c5d9c9b79c605a7addb78ab",
-=======
-        "ref": "v1.25.0",
-        "sha256": "c1db768aef096a43c57ae14e2feec9cb3f7921c41da24bc0ed2ccd60c296d5bb",
     },
     "javax_annotation_javax_annotation_api": {
         "type": "jvm_maven_import_external",
