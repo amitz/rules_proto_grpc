@@ -148,8 +148,8 @@ VERSIONS = {
         "type": "github",
         "org": "bazelbuild",
         "repo": "bazel-gazelle",
-        "ref": "v0.19.1",
-        "sha256": "d987004a72697334a095bbaa18d615804a28280201a50ed6c234c40ccc41e493",
+        "ref": "v0.20.0",
+        "sha256": "1528eedddaa24d4878c93785703dce4f7bfbabd868713e6d1b3ae950e6ec887b",
     },
 
     # gRPC gateway
