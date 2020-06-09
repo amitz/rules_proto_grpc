@@ -3,10 +3,11 @@ load("//:plugin.bzl", "proto_plugin")
 proto_plugin(
     name = "scala_plugin",
     out = "{name}.jar",
-    tool = select({
-        "@bazel_tools//src/conditions:host_windows": "@com_github_scalapb_scalapb//:bin/protoc-gen-scala.bat",
-        "//conditions:default": "@com_github_scalapb_scalapb//:bin/protoc-gen-scala"
-    }),
+    options = [
+	"java_conversions",
+    ],
+    tool = select({"@bazel_tools//src/conditions:host_windows": "@com_github_scalapb_scalapb//:bin/protoc-gen-scala.bat",
+                   "//conditions:default": "@com_github_scalapb_scalapb//:bin/protoc-gen-scala"}),
     use_built_in_shell_environment = True,
     visibility = ["//visibility:public"],
 )
