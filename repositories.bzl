@@ -141,15 +141,15 @@ VERSIONS = {
         "type": "github",
         "org": "bazelbuild",
         "repo": "rules_go",
-        "ref": "v0.21.4",
-        "sha256": "f020c69932754be6316d8df110a748ba5f9e8776a7a988e2fedb3eb7eb38fe58",
+        "ref": "v0.23.3",
+        "sha256": "608bb3e3788a21aa0653faaa6a3e00ddf806e26aa97a6f0d960ace2b2c958950",
     },
     "bazel_gazelle": {
         "type": "github",
         "org": "bazelbuild",
         "repo": "bazel-gazelle",
-        "ref": "v0.20.0",
-        "sha256": "1528eedddaa24d4878c93785703dce4f7bfbabd868713e6d1b3ae950e6ec887b",
+        "ref": "v0.21.1",
+        "sha256": "2423201f91471ea87925b81962258e27a22cd8ebb4fe355bf033dcf2ad668541",
     },
 
     # gRPC gateway
@@ -157,8 +157,8 @@ VERSIONS = {
         "type": "github",
         "org": "grpc-ecosystem",
         "repo": "grpc-gateway",
-        "ref": "v1.12.1",
-        "sha256": "8a3ce7fa981dd21c0693fb2922457053a7c2e5a5687e22d9f19fe7c35520c35e",
+        "ref": "v1.14.6",
+        "sha256": "f0af1c7c75609c996fcbcd0cf77764587b0cbb13fab6aa9c0a153db7d9e1cd5d",
     },
 
     # gRPC web
